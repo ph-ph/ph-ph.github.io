@@ -2,3 +2,14 @@ baseURL = 'https://blog.dkishylau.com/'
 languageCode = 'en-us'
 title = 'A blog'
 theme = 'paper'
+
+[params]
+  twitter = 'dkishylau'
+  github = 'ph-ph'
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
