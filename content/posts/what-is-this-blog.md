@@ -4,7 +4,7 @@ date: 2021-12-21T20:47:59-10:00
 draft: true
 ---
 
-I plan to use this blog as a random collection of reports about my side projects and things that I learned or looked into along the way.
+I plan to use this blog as a random collection of reports about my side projects and things that I learned or looked into along the way.<!--more-->
 
 I haven't posted publicly on the Internet for like 10 years (not counting twice-a-year-on-average posts on Facebook and Instagram). I didn't feel like I had to, really. But more recently I came to the conclusion that having a blog of sorts might be useful for several reasons.
 

@@ -12,3 +12,5 @@ Interested in:
 - data engineering;
 - fighting fraud;
 - improving performance and reliability of software systems.
+
+See [What is this blog]({{< relref "/posts/what-is-this-blog" >}}) for more details.

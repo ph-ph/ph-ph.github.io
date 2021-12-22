@@ -1,6 +1,6 @@
 baseURL = 'https://blog.dkishylau.com/'
 languageCode = 'en-us'
-title = 'A blog'
+title = 'Dzmitry Kishylau'
 theme = 'paper'
 
 [params]
