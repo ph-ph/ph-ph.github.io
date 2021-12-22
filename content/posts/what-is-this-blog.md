@@ -1,7 +1,7 @@
 ---
 title: "What Is This Blog"
 date: 2021-12-21T20:47:59-10:00
-draft: true
+draft: false
 ---
 
 I plan to use this blog as a random collection of reports about my side projects and things that I learned or looked into along the way.<!--more-->
