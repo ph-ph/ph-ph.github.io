@@ -1,7 +1,7 @@
 ---
 title: "Choosing Blog Platform"
 date: 2021-12-22T15:09:54-10:00
-draft: true
+draft: false
 ---
 Ok, I know this blog so far is only about blogging, which is never a good sign, but I spent about a week looking at various platforms and frameworks, so there has to be something useful in all of that.<!--more-->
 
