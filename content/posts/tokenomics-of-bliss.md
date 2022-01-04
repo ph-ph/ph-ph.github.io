@@ -1,7 +1,7 @@
 ---
 title: "Tokenomics of Bliss"
 date: 2022-01-03T22:05:25-08:00
-draft: true
+draft: false
 ---
 I've spent a bit of time looking at various projects in crypto space and trying to make sense of them. This post tries to cover a vast part of space that is sometimes referred to as "tokenomics".<!--more-->
 
