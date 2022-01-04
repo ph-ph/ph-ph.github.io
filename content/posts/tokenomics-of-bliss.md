@@ -16,14 +16,14 @@ You won't find the math level of rigor in this post either, but I think it's sti
 # Bliss as a toy example of token economics
 I stumbled recently on a random crypto project that is just that, "let's reward users for taking actions online", taken quite literally. The project seems to be dormant, but it's real enough that someone cared to create a website and write a white paper. It also tries to use as many mechanisms of token economy as possible in the late 2021.
 
-I'm going to use it as an example, not to make fun of it, but rather to avoid handwavy assertions about an abstract product with abstract functionality. A few places that elaborate the idea of "useful Ponzi" don't even use businesses as an example - they talk about viral stuff, like Gangam and Old Country Road videos. [Bliss](https://bliss.watch/) is as concrete product idea as it gets:
+I'm going to use it as an example, not to make fun of it, but rather to avoid hand-wavy assertions about an abstract product with abstract functionality. A few places that elaborate the idea of "useful Ponzi" don't even use businesses as an example - they talk about viral stuff, like Gangam and Old Country Road videos. [Bliss](https://bliss.watch/) is as concrete product idea as it gets:
 
 > 1. Watch breathing exercises to mint BLISS coin
 > 2. Use BLISS to unlock more visuals
 > 3. Exchange for other crypto or fiat
 > 4. BLISS coin is given value from the sales of visuals as NFTs
 
-Ok, let's suspend our disbelief (or excitement!?) for a bit and try to figure out how it actually works. Let's also ignore the point 4 about NFTs for a bit - if I understand it correctly, it makes the whole scheme even weirder from purely economic point of view. I'll come back to it later.
+Ok, let's suspend our disbelief (or excitement!?) for a bit and try to figure out how it actually works. Let's also ignore point 4 about NFTs for a bit - if I understand it correctly, it makes the whole scheme even weirder from a purely economic point of view. I'll come back to it later.
 
 First, let's address some of the things that are not explicit in the description above, but are assumed anyway.
 
@@ -37,9 +37,9 @@ However! One of the weird things about crypto in general is that these internal 
 
 [^1]: Cynical way of looking at it, of course, is that you don't expect any of these things to happen, but you do expect a lot of other people to believe in them and you buy $BLISS to sell it to them later. In any case, the value of the coin is associated not as much with the utility of the things you can buy with it, but with how the whole Bliss project is doing.
 
-Finding analogies for this dual nature of tokens in non-crypto world is somewhat hard. Many businesses have some sort of internal currency in the form of credits or reward points, but these are almost always denominated in dollars and their value doesn't depend on how the company is doing. The idea of buying Delta frequent flyer points because you think Delta is going to grow 10x in the future is absurd - this is not how things work, you should buy Delta stock instead. Why do businesses denominate credits in dollars? Because that's way easier for customers and for traditional accounting. Imagine paying for Uber ride with shares of Uber - odd and pretty inconvenient!
+Finding analogies for this dual nature of tokens in the non-crypto world is somewhat hard. Many businesses have some sort of internal currency in the form of credits or reward points, but these are almost always denominated in dollars and their value doesn't depend on how the company is doing. The idea of buying Delta frequent-flyer points because you think Delta is going to grow 10x in the future is absurd - this is not how things work, you should buy Delta stock instead. Why do businesses denominate credits in dollars? Because that's way easier for customers and for traditional accounting. Imagine paying for an Uber ride with shares of Uber - odd and pretty inconvenient!
 
-A little less absurd example is buying a lot of currency of a country that you think is going to dominate the world in the future, but even this is pretty silly - CNY/USD exchange rate doesn't reflect how China economy grows relative to US economy. Again, it would make a lot more sense to buy stocks of Chinese companies or some other assets in China.
+A little less absurd example is buying a lot of currency of a country that you think is going to dominate the world in the future, but even this is pretty silly - CNY/USD exchange rate doesn't reflect how China's economy grows relative to the US economy. Again, it would make a lot more sense to buy stocks of Chinese companies or some other assets in China.
 
 Why has the dual nature of tokens become so prevalent in crypto? I don't know, but some obvious explanations come to mind:
 
@@ -90,7 +90,7 @@ Ok, fair enough. But let's hypothesize a little bit.
 
 - As the price of the token goes up, using the app and minting BLISS by breathing becomes more and more lucrative, attracting new users and pushing existing users to spend more time using the app.
 
-- The flywheel of "more users -> firmer belief in success of the project & more demand for "visuals" -> higher token price -> more users" keeps spinning. The project grows and improves mental health of its users in the process.
+- The flywheel of "more users -> firmer belief in success of the project & more demand for "visuals" -> higher token price -> more users" keeps spinning. The project grows and improves the mental health of its users in the process.
 
 ## Pessimistic scenario(s)
 
@@ -112,9 +112,9 @@ Things do look a lot simpler, though, if you can somehow guarantee that the pric
 
 My personal opinion is that with a lot of luck and some exceptional execution you can make that economic model work for you for a short period of time. This might be ok for viral videos and other content, but seems like a bad choice for running a sustainable business. You can survive longer as a Ponzi scheme, though - Bernie Madoff's scheme ran for [at least 17 years](https://www.investopedia.com/terms/b/bernard-madoff.asp)[^2].
 
-[^2]: Yeah, mindblowing and also quite depressing.
+[^2]: Yeah, mind blowing and also quite depressing.
 
-Let's address few remaining points that are specific to Bliss and aren't representative of token economics in general.
+Let's address a few remaining points that are specific to Bliss and aren't representative of token economics in general.
 
 # NFTs and liquidity
 
@@ -155,9 +155,9 @@ It's hard not to notice the simplicity (naivety?) of [parameters](https://whitep
 
 How did they come up with this 50/20/20/10 structure? Well, I guess you have to start somewhere. Makes me wonder how Airbnb and Uber determined their fee structure in the beginning. At least they could look at existing businesses operating roughly in the same space. Nowadays they certainly have huge teams of people who spend all their time slightly tweaking the fees to increase revenue while keeping the business sustainable. It's much harder to tweak the fee structure in a smart contract, let alone A/B test it.
 
-It's unlikely that Bliss will live long enough to get to that level of sophistication (unless they are super lucky and 50/20/10/10 is _the right_ parameters). But I guess the experimentation and tuning in web3 world works differently - if the idea is good enough, there will be a bunch of similar projects, and maybe one of them will get the fee structure right, and will survive [^3]. I don't think this kind of experimentation is very efficient, but it may work if there's enough people willing to fund it.
+It's unlikely that Bliss will live long enough to get to that level of sophistication (unless they are super lucky and 50/20/10/10 is _the right_ parameters). But I guess the experimentation and tuning in the web3 world works differently - if the idea is good enough, there will be a bunch of similar projects, and maybe one of them will get the fee structure right, and will survive [^3]. I don't think this kind of experimentation is very efficient, but it may work if there's enough people willing to fund it.
 
 [^3]: I'm not at all sure that's how things actually work, though. Nobody rushes to clone failed projects, and clones of successful projects tend to copy most of the parameters. But there's probably some slow tweaking and feedback going on - e.g. SushiSwap might've [influenced](https://cointelegraph.com/news/sushiswaps-liquidity-grab-actually-made-uniswap-stronger-data-shows) the current governance structure of Uniswap.
 
 # The end!
-Phew, that's a lot of words about silly project. However, I do think the ideas about dual nature of tokens and staking apply to a bunch of other stuff in web3/crypto. If I got them terribly wrong, let me know on [Twitter](https://twitter.com/dkishylau).
+Phew, that's a lot of words about a silly project. However, I do think the ideas about dual nature of tokens and staking apply to a bunch of other stuff in web3/crypto. If I got them terribly wrong, let me know on [Twitter](https://twitter.com/dkishylau).
