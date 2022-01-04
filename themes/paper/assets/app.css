@@ -12,7 +12,7 @@
   --gap: 3.5rem;
   --y-gap: 8rem;
   --wide: 140rem;
-  --narrow: 80rem;
+  --narrow: 90rem;
   --side: calc((var(--wide) - var(--narrow)) / 2);
   --header: 8rem;
   --footer: calc(8rem + var(--safe-bottom));
