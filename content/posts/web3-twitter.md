@@ -3,7 +3,7 @@ title: "Mining data in Web3 Twitter"
 date: 2022-01-11T09:21:59-08:00
 draft: true
 ---
-I spent several weeks in November-December building a data pipeline and a website to surface urls that trend on web3/crypto Twitter. This was a collaboration project with [Nadia](https://twitter.com/nseldeib) and [Jared](https://twitter.com/jaredcosulich) from SPC. They were interested in making web3 development easier while I was interested in getting some non-trivial dataset to practice my data wrangling skills. In the end I learned a lot more about Google Cloud than about time series analysis or data visualization, but that was fun anyway.
+I spent several weeks in November-December building a data pipeline and a website to surface urls that trend on web3/crypto Twitter. This was a collaboration project with [Nadia](https://twitter.com/nseldeib) and [Jared](https://twitter.com/jaredcosulich) from [SPC](https://www.southparkcommons.com/). They were interested in making web3 development easier while I was interested in getting some non-trivial dataset to practice my data wrangling skills. In the end I learned a lot more about Google Cloud than about time series analysis or data visualization, but that was fun anyway.
 
 The idea is simple: Twitter and especially the part of it that talks about crypto and web3 is a noisy and unstructured place. Yet it is often the primary source of information about new projects and ideas. Can we apply a bit of human curation and data analysis to extract something useful out of it? Like, a list of projects that are trending, or a list of users that are worth following?
 
@@ -16,7 +16,7 @@ You can check out the [website](https://web3twitter.dkishylau.com), the Google C
 # Web3 Twitter
 First of all, I don't use Twitter. I probably rediscovered a bunch of things that are obvious to anyone who uses it a lot or has tried processing Twitter data.
 
-The data is noisy, super redundant, sometimes hard to decipher without the inside knowledge. My first data batch was about 100k tweets, which sounds like a lot, but actually isn't, because a big chunk of those tweets were retweets and quotes and likes of other tweets. I haven't tried to properly deduplicate the data (because I assumed all these retweets were useful for my purposes would amplify the signal), but I'd guess the "original content" was in the low 10s of thousands or even smaller.
+The data is noisy, super redundant, sometimes hard to decipher without the inside knowledge. My first data batch was about 100k tweets, which sounds like a lot, but actually isn't, because a big chunk of those tweets were retweets and quotes and likes of other tweets. I haven't tried to properly deduplicate the data (because I assumed all these retweets were useful for my purposes and would amplify the signal), but I'd guess the "original content" was in the low 10s of thousands or even smaller.
 
 All naive measures of tweet importance - likes, quotes, retweets, replies - don't always work for various reasons, the biggest one being that it's super easy to like/quote/retweet so a lot of users seem to be doing that almost automatically. There are more web3-specific reasons as well. For example, I assumed that tweets with a lot of replies would be important. Cryptopunks proved me wrong.
 
@@ -33,7 +33,7 @@ One obvious way to improve the quality of the data is to add more influencers, a
 # Google cloud
 It was the first time I tried to build something non-trivial on Google Cloud, and overall the experience was fairly positive. Documentation, although not perfect, does a great job of providing useful walkthroughs and code samples for popular tasks.
 
-I had a bit of trouble figuring out which products to use. For example, there are 3 or 4 different Google products that look like they should be used to build data processing pipelines. I ended up using a combination of Workflow and Cloud Functions, and I'm fairly content with that choice. The pipeline required pretty much no tweaking or maintenance after the initial deploy - it's been running for almost a month and failed only once due to some random Twitter API errors.
+I had a bit of trouble figuring out which products to use. For example, there are 3 or 4 different Google products that look like they should be used to build data processing pipelines. I ended up using a combination of Workflow and Cloud Functions, and I'm fairly content with that choice. The pipeline required pretty much no tweaking or maintenance after the initial deployment - it's been running for almost a month and failed only once due to some random Twitter API errors.
 
 I was surprised that a data pipeline that runs every day and downloads 100k tweets per month could fit into Google's free tier. In my case, running it has non-zero cost for two reasons:
 - I'm using Firestore as a temporary storage for new tweets after I get them from the Twitter API. For simplicity I chose to store each tweet as a separate document, and that pushes the usage slightly above the free tier limits for document reads. A smarter way would've been to group multiple tweets in a document or store them somewhere else, like Google Storage.
