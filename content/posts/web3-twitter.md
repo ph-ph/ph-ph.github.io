@@ -1,7 +1,7 @@
 ---
 title: "Mining data in Web3 Twitter"
 date: 2022-01-11T09:21:59-08:00
-draft: true
+draft: false
 ---
 I spent several weeks in November-December building a data pipeline and a website to surface urls that trend on web3/crypto Twitter. This was a collaboration project with [Nadia](https://twitter.com/nseldeib) and [Jared](https://twitter.com/jaredcosulich) from [SPC](https://www.southparkcommons.com/). They were interested in making web3 development easier while I was interested in getting some non-trivial dataset to practice my data wrangling skills. In the end I learned a lot more about Google Cloud than about time series analysis or data visualization, but that was fun anyway.
 
