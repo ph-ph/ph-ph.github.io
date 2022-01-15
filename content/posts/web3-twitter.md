@@ -3,11 +3,11 @@ title: "Mining data in Web3 Twitter"
 date: 2022-01-11T09:21:59-08:00
 draft: false
 ---
-I spent several weeks in November-December building a data pipeline and a website to surface urls that trend on web3/crypto Twitter. This was a collaboration project with [Nadia](https://twitter.com/nseldeib) and [Jared](https://twitter.com/jaredcosulich) from [SPC](https://www.southparkcommons.com/). They were interested in making web3 development easier while I was interested in getting some non-trivial dataset to practice my data wrangling skills. In the end I learned a lot more about Google Cloud than about time series analysis or data visualization, but that was fun anyway.
+I spent several weeks in November-December building a data pipeline and a website to surface urls that trend on web3/crypto Twitter. This was a collaboration project with [Nadia](https://twitter.com/nseldeib) and [Jared](https://twitter.com/jaredcosulich) from [South Park Commons](https://www.southparkcommons.com/). They were interested in making web3 development easier while I was interested in getting some non-trivial dataset to practice my data wrangling skills. In the end I learned a lot more about Google Cloud than about time series analysis or data visualization, but that was fun anyway.
 
-The idea is simple: Twitter and especially the part of it that talks about crypto and web3 is a noisy and unstructured place. Yet it is often the primary source of information about new projects and ideas. Can we apply a bit of human curation and data analysis to extract something useful out of it? Like, a list of projects that are trending, or a list of users that are worth following?
+The idea is simple: Twitter and especially the part of it that talks about crypto and web3 is a noisy and unstructured place. Yet it is often the primary source of information about new projects and ideas. Can we apply a bit of human curation and data analysis to extract something useful out of it? For instance, a list of projects that are trending or a list of users that are worth following?
 
-In our case the "human curation" part was basically handpicking 30-ish Twitter users that are important in some way - it was a mix of VC crypto evangelists like Chris Dixon and Packy McCormick, NFT characters, DAO leaders etc (let's call them "influencers"). The list is obviously incomplete and biased, but the hope was that at scale some biases will cancel out and we'll get something meaningful.
+In our case the "human curation" part was basically handpicking 30-ish Twitter users that we felt were high signal for web3 in some way - it was a mix of VC crypto evangelists like Chris Dixon and Packy McCormick, NFT characters, DAO leaders etc (let's call them "influencers"). The list is obviously incomplete and biased, but the hope was that at scale some biases will cancel out and we'll get something meaningful.
 
 The "data analysis" part was on me - I used Twitter API to download 100k+ tweets, ran basic data analysis to figure out what I could quickly extract from that data, and built a data processing pipeline to download fresh tweets and process them using BigQuery. I then built a super simple website that uses some of the data from BigQuery to show "trending" URLs.
 
@@ -22,7 +22,7 @@ All naive measures of tweet importance - likes, quotes, retweets, replies - don'
 
   {{< tweet user="punk6529" id="1455868499620999178" >}}
 
-Retweets and quotes are an ok measure of tweet quality, but they completely fail when some viral meme comes into play. In terms of engagement, a funny cat picture beats an insightful web3 post by a couple of orders of magnitude, so just sorting everything by retweets or quotes will give you cats, not insightful posts.
+Retweets and quotes are an ok measure of tweet quality, but they completely fail when some viral meme comes into play, and memes play a huge role in web3. In terms of engagement, a funny cat picture beats an insightful web3 commentary-type post by a couple of orders of magnitude, so just sorting everything by retweets or quotes will give you cats, not insightful posts.
 
 What seems to work is looking at urls _mentioned_ by the influencers - these at least provide you some view into what people are talking about right now.
 
@@ -30,7 +30,7 @@ Simply looking at word frequencies might yield something useful as well. My naiv
 
 One obvious way to improve the quality of the data is to add more influencers, and you can try to do that in a semi-automated way by just looking at the users that the influencers interact with a lot. I didn't have time to do that, though, and it ran the risk of hitting Twitter API monthly limit (and my budget for this project).
 
-# Google cloud
+# Google Cloud
 It was the first time I tried to build something non-trivial on Google Cloud, and overall the experience was fairly positive. Documentation, although not perfect, does a great job of providing useful walkthroughs and code samples for popular tasks.
 
 I had a bit of trouble figuring out which products to use. For example, there are 3 or 4 different Google products that look like they should be used to build data processing pipelines. I ended up using a combination of Workflow and Cloud Functions, and I'm fairly content with that choice. The pipeline required pretty much no tweaking or maintenance after the initial deployment - it's been running for almost a month and failed only once due to some random Twitter API errors.
@@ -46,4 +46,6 @@ Might be a personal preference, but while working on this project I realized how
 Weird UX problems are not limited to Colab, though. More than once I had to look for the Ok/Submit button in Google Cloud configuration interfaces, only to find it in the lower right corner of my screen, far far away from all the input fields. Do they optimize for people using their console from mobile phones? Hard to say, but it definitely feels odd.
 
 # The end
+Big thanks to Nadia for reviewing this post.
+
 Let me know on [Twitter](https://twitter.com/dkishylau) if you have any questions or feedback!
