@@ -1,7 +1,7 @@
 ---
 title: "Argentina Bike Trip"
 date: 2022-04-13T11:45:35-07:00
-draft: true
+draft: false
 ---
 
 I went on a bikepacking trip in Argentina for two weeks. The route started in Salta, went for more than 500 miles along Route 40 and ended in Talampaya National Park. I then spent a couple of days exploring Buenos Aires. <!--more-->
