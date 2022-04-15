@@ -4,11 +4,11 @@ date: 2022-04-13T11:45:35-07:00
 draft: false
 ---
 
-I went on a bikepacking trip in Argentina for two weeks. The route started in Salta, went for more than 500 miles along Route 40 and ended in Talampaya National Park. I then spent a couple of days exploring Buenos Aires. <!--more-->
+I went on a bikepacking trip in Argentina for two weeks. The route started in Salta, went for more than 500 miles along [Routa 40](https://en.wikipedia.org/wiki/National_Route_40_(Argentina)) and ended in Talampaya National Park. I then spent a couple of days exploring Buenos Aires. <!--more-->
 
 {{< figure src="/img/Ventisquero_pano.jpg" caption="Quebrada de las Flechas. I didn't see a lot of people that day" link="https://photos.app.goo.gl/NVZ6cnNyEXVqn7WS7">}}
 
-I didn't do it alone, and it wasn't a hardcore bikepacking - I rode with a small group from BalticCycle who were on their [2-month journey](https://www.bicycle.lt/en/main/tours.bc2020-cont/route) from Iguazu Falls to Valparaiso. We had a support car (meaning we didn't have to carry all our stuff on our bikes), but I'd say the support was very hands-off and self-reliance was encouraged and expected [^1].
+I didn't do it alone, and it wasn't a hardcore bikepacking - I rode with a small group from BalticCycle who were on their [2-month journey](https://www.bicycle.lt/en/main/tours.bc2020-cont/route) from Iguazu Falls to Valparaiso. We had a support car (meaning we didn't have to carry all our stuff on our bikes), but the support was very hands-off and self-reliance was encouraged and expected [^1].
 
 There are bike tours where people leisurely ride along a well-established route, occasionally doing prearranged stops at upscale wineries. Our tour wasn't quite like that, although there were wineries too. We spent most of the nights camping, with occasional stops in hostel-like places.
 
@@ -29,7 +29,7 @@ A typical day was about 50-60 miles of riding. The approximate route and a likel
 
 The group was small - 6 riders and a driver. There were 3 folks from Poland, 3 folks from Lithuania and I, Belarusian American, definitely on the younger side compared to others. We spoke a mix of Lithuanian, Polish, Russian and English, switching between languages somewhat randomly. Nobody in the group spoke all 4 languages, and only one, the driver, had a decent knowledge of Spanish, a true lifesaver more than once.
 
-The other half of the group had left right before I joined, after a month-long journey across Paraguay, Bolivia and Northern Argentina. They carried back home[^3] some colorful stories about 100-mile 100+ degrees (in shade!) days in [Paraguayan Chaco](https://en.wikipedia.org/wiki/Chaco_(Paraguay)) and one multi-day trip on a cargo boat up the Paraguay River. In the hindsight, the segment I rode was by far the most comfortable.
+The other half of the group had left right before I joined, after a month-long journey across Paraguay, Bolivia and Northern Argentina. They carried back home[^3] some colorful stories about 100-mile 100+ degrees (in shade!) days in [Paraguayan Chaco](https://en.wikipedia.org/wiki/Chaco_(Paraguay)) and one multi-day trip on a cargo boat up the Paraguay River. In hindsight, the segment I rode was by far the most comfortable.
 
 [^2]: The answer turned out to be "show up at 3:30am at the bus station, there'll be a bus". Despite all my efforts, I couldn't figure out if there was another option.
 
@@ -57,14 +57,14 @@ Argentina is 4 hours ahead of Seattle, which is barely noticeable if you worry a
 
 Imagine you have a long-ish 70 mile day ahead of you, so you decide to be prudent and go to sleep at 10pm. Sure, the municipal camping you’re staying at is right next to the local amusement park[^4], but that’s kids stuff, and they should be in bed by then? Boy, are you in for some surprise. At 10pm the kids are happily jumping on trampolines, music is blasting out of giant speakers, and some dude is broadcasting raffle winning numbers to everyone within a mile radius. The things calm down somewhat by 2am, just in time for a wedding (that started in church at 10pm, of course) to pick up the momentum. By 5am the wedding winds down, which you absolutely can’t miss because all the local dogs are barking at the same time. Even the worst jetlag doesn’t last more than several days, but I’m not sure how many weeks, months or years is needed to adjust your internal clock to this.
 
-[^4]: What kind of crazy urban planning genius would place a campground next to some roller coasters? It all made sense, though - local campgrounds are more often used by locals for all kinds of celebrations, so they definitely fall into "noisy place" bucket. Placing all the noisy places - campground, amusement park, banquet hall - in one place far from town center is reasonable, even though it doesn't make for a happy camping.
+[^4]: What kind of crazy urban planning genius would place a campground next to some roller coasters? It all made sense, though - local campgrounds are more often used by locals for all kinds of celebrations, so they definitely fall into the "noisy place" bucket. Placing all the noisy places - campground, amusement park, banquet hall - in one place far from town center is reasonable, even though it doesn't make for a happy camping.
 
 ## Food
 The food in restaurants was cheap and delicious, and everyone ate a lot of it. One of my daily games was trying to pace myself along the route so that I was near places likely to have restaurants around lunch and dinner time (also trying to guess if they would be open; see above).  There are 4 food staples in Northwestern Argentina: [empanadas](https://en.wikipedia.org/wiki/Empanada#Argentina), [milanesas](https://en.wikipedia.org/wiki/Milanesa), [humitas](https://en.wikipedia.org/wiki/Humita) and [locro](https://en.wikipedia.org/wiki/Locro). There’s an “El Club de la Milanesa” restaurant chain in Buenos Aires, and I feel like I was a virtual member of that club by the end of the first week. Bakeries and sweet stuff were also everywhere, so no weight was lost during the trip.
 
 {{<figure src="/img/Bakery.jpg" caption="A bakery in Chicoana. Some tough choices had to be made there." link="https://photos.app.goo.gl/if8LrrbBF7mn6p9r7">}}
 
-The most special dish I ate, though, was pasta in a small very empty town on a very windy day. You could see it being made from scratch.
+The most special dish I ate, though, was pasta in a small, very empty town on a very windy day. You could see it being made from scratch.
  {{<figure src="/img/Pasta_chef.jpeg" caption="Chef Adrian doing the magic." link="https://photos.app.goo.gl/HPWkN9imobAMUtRR6">}}
 
 ## The bike thing
