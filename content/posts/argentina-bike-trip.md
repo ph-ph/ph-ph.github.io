@@ -67,10 +67,14 @@ The food in restaurants was cheap and delicious, and everyone ate a lot of it. O
 The most special dish I ate, though, was pasta in a small very empty town on a very windy day. You could see it being made from scratch.
  {{<figure src="/img/Pasta_chef.jpeg" caption="Chef Adrian doing the magic." link="https://photos.app.goo.gl/HPWkN9imobAMUtRR6">}}
 
-# The bike thing
+## The bike thing
 Yeah, so the story won't be complete without mentioning that Delta lost my bike for a couple of days on my way to Argentina, and when they finally found it it was too late, because our group had already left Salta and headed for the mountains.
 
 I spent months upgrading and tuning my bike for the trip, and losing it 2 days before the start of the ride was, I guess, objectively a catastrophe. It certainly felt that way for a couple of days.
 
 The funny thing, though, is that now, 4 weeks later, the whole incident feels like a minor blip on the whole experience, additional spice and color, if you will. I bought a new bike in Salta, it wasn't as good as mine and it still cost me a bunch of money, and I felt terrible that day. But the next day, when I was starting to climb up the [Escoipe Gorge](https://www.saltaturismo.com/turismo-aventura/quebrada-de-escoipe.html), I couldn't care less about which bike I was riding - the adventure was on, and that’s what mattered.
 {{<figure src="/img/Bike.jpeg" caption="My bike for two weeks" link="https://photos.app.goo.gl/WJTgKQiJAfpEMXkY6">}}
+
+## The map
+
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1qWxN4PVG3Kz6b4z5OwYbQB8jw32E3TZD&ehbc=2E312F" width="640" height="480"></iframe>
