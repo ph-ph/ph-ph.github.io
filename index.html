@@ -1,14 +1,145 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Dzmitry Kishylau</title><meta name=description content><meta name=author content><link rel="preload stylesheet" as=style href=https://blog.dkishylau.com/app.min.css><link rel=preload as=image href=https://blog.dkishylau.com/theme.png><link rel=preload as=image href=https://blog.dkishylau.com/twitter.svg><link rel=preload as=image href=https://blog.dkishylau.com/github.svg><link rel=icon href=https://blog.dkishylau.com/favicon.ico><link rel=apple-touch-icon href=https://blog.dkishylau.com/apple-touch-icon.png><meta name=generator content="Hugo 0.97.0"><link rel=alternate type=application/rss+xml href=https://blog.dkishylau.com/index.xml title="Dzmitry Kishylau"><meta property="og:title" content="Dzmitry Kishylau"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://blog.dkishylau.com/"><meta itemprop=name content="Dzmitry Kishylau"><meta itemprop=description content><meta name=twitter:card content="summary"><meta name=twitter:title content="Dzmitry Kishylau"><meta name=twitter:description content></head><body class=not-ready data-menu=true><header class=header><h1 class=logo><a class=site-name href=https://blog.dkishylau.com/>Dzmitry Kishylau</a><a class=btn-dark></a></h1><script>let bodyClx=document.body.classList,btnDark=document.querySelector(".btn-dark"),sysDark=window.matchMedia("(prefers-color-scheme: dark)"),darkVal=localStorage.getItem("dark"),setDark=e=>{bodyClx[e?"add":"remove"]("dark"),localStorage.setItem("dark",e?"yes":"no")};setDark(darkVal?darkVal==="yes":sysDark.matches),requestAnimationFrame(()=>bodyClx.remove("not-ready")),btnDark.addEventListener("click",()=>setDark(!bodyClx.contains("dark"))),sysDark.addEventListener("change",e=>setDark(e.matches))</script><nav class=menu><a href=/about/>About</a></nav><nav class=social><a class=twitter style=--url:url(./twitter.svg) href=https://twitter.com/dkishylau target=_blank></a>
-<a class=github style=--url:url(./github.svg) href=https://github.com/ph-ph target=_blank></a>
-<a class=rss href=./index.xml style=--url:url(./rss.svg)></a></nav></header><main class=main><article class=post-entry><h2>Argentina Bike Trip</h2><time>Apr 13, 2022</time>
-<a href=https://blog.dkishylau.com/posts/argentina-bike-trip/></a><section class=entry-content><p>I went on a bikepacking trip in Argentina for two weeks. The route started in Salta, went for more than 500 miles along Routa 40 and ended in Talampaya National Park. I then spent a couple of days exploring Buenos Aires.
-...</p></section></article><article class=post-entry><h2>Exploratory Data Analysis vs Data Visualization</h2><time>Feb 14, 2022</time>
-<a href=https://blog.dkishylau.com/posts/eda-vs-datavis/></a><section class=entry-content><p>I’ve been meaning to uplevel my data visualization skills for a while, and I finally found time to do it. The process is going very slow, partly because it’s a little unclear what “uplevel” means in this specific case, and when I’m going to be “done”.
-So far I’ve read two classic (or just old, if you like) books - John Tukey’s Exploratory Data Analysis and William Cleveland’s Visualizing Data. I then picked two random datasets on Kaggle and tried to apply what I’ve learned....</p></section></article><article class=post-entry><h2>Mining data in Web3 Twitter</h2><time>Jan 11, 2022</time>
-<a href=https://blog.dkishylau.com/posts/web3-twitter/></a><section class=entry-content><p>I spent several weeks in November-December building a data pipeline and a website to surface urls that trend on web3/crypto Twitter. This was a collaboration project with Nadia and Jared from South Park Commons. They were interested in making web3 development easier while I was interested in getting some non-trivial dataset to practice my data wrangling skills. In the end I learned a lot more about Google Cloud than about time series analysis or data visualization, but that was fun anyway....</p></section></article><article class=post-entry><h2>Tokenomics of Bliss</h2><time>Jan 3, 2022</time>
-<a href=https://blog.dkishylau.com/posts/tokenomics-of-bliss/></a><section class=entry-content><p>I’ve spent a bit of time looking at various projects in crypto space and trying to make sense of them. This post tries to cover a vast part of space that is sometimes referred to as “tokenomics”.
-...</p></section></article><article class=post-entry><h2>Choosing Blog Platform</h2><time>Dec 22, 2021</time>
-<a href=https://blog.dkishylau.com/posts/choosing-blog-platform/></a><section class=entry-content><p>Ok, I know this blog so far is only about blogging, which is never a good sign, but I spent about a week looking at various platforms and frameworks, so there has to be something useful in all of that.
-...</p></section></article><article class=post-entry><h2>What Is This Blog</h2><time>Dec 21, 2021</time>
-<a href=https://blog.dkishylau.com/posts/what-is-this-blog/></a><section class=entry-content><p>I plan to use this blog as a random collection of reports about my side projects and things that I learned or looked into along the way.
-...</p></section></article></main><footer class=footer><p>&copy; 2022 <a href=https://blog.dkishylau.com/>Dzmitry Kishylau</a></p><p>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</p><p>Theme is based on <a href=https://github.com/nanxiaobei/hugo-paper rel=noopener target=_blank>Paper</a></p></footer></body></html>
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<title>Dzmitry Kishylau</title>
+<meta name=description content>
+<meta name=author content>
+<link rel=icon type=image/x-icon href=https://blog.dkishylau.com/images/favicon-light.ico>
+<link rel=apple-touch-icon href=https://blog.dkishylau.com/images/apple-touch-icon-light.png>
+<link rel=stylesheet href=https://blog.dkishylau.com/stylesheets/light.css>
+<link rel="preload stylesheet" as=style href=https://blog.dkishylau.com/custom.min.css>
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js></script>
+<meta name=generator content="Hugo 0.92.2">
+<link rel=alternate type=application/rss+xml href=https://blog.dkishylau.com/index.xml title="Dzmitry Kishylau">
+<meta property="og:title" content="Dzmitry Kishylau">
+<meta property="og:description" content>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.dkishylau.com/">
+<meta itemprop=name content="Dzmitry Kishylau">
+<meta itemprop=description content>
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Dzmitry Kishylau">
+<meta name=twitter:description content>
+</head>
+<body>
+<main class=main>
+<div class="grid grid-centered">
+<div class=grid-cell>
+<nav class=header-nav>
+<a href=/ class=header-logo title="Dzmitry Kishylau">Dzmitry Kishylau</a>
+<ul class=header-links>
+<li>
+<a href=/about title=About><svg xmlns="http://www.w3.org/2000/svg" class="icon-about"><use href="/i-about.svg#icon-about" xlink:href="/i-about'.svg#icon-about"/></svg>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/dkishylau rel="noreferrer noopener" target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon-twitter"><use href="/i-twitter.svg#icon-twitter" xlink:href="/i-twitter'.svg#icon-twitter"/></svg>
+</a>
+</li>
+<li>
+<a href=https://github.com/ph-ph rel="noreferrer noopener" target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon-github"><use href="/i-github.svg#icon-github" xlink:href="/i-github'.svg#icon-github"/></svg>
+</a>
+</li>
+</ul>
+</nav>
+<ul class=article-list>
+<li class=article-list-item>
+<a href=https://blog.dkishylau.com/posts/argentina-bike-trip/ title="Argentina Bike Trip">
+<h5>Argentina Bike Trip</h5>
+</a>
+<p>
+<p>I went on a bikepacking trip in Argentina for two weeks. The route started in Salta, went for more than 500 miles along Routa 40 and ended in Talampaya National Park. I then spent a couple of days exploring Buenos Aires.
+...</p>
+</p>
+<div class=article-list-footer>
+<span class=article-list-date>
+Apr 13, 2022
+</span>
+</div>
+</li>
+<li class=article-list-item>
+<a href=https://blog.dkishylau.com/posts/eda-vs-datavis/ title="Exploratory Data Analysis vs Data Visualization">
+<h5>Exploratory Data Analysis vs Data Visualization</h5>
+</a>
+<p>
+<p>I’ve been meaning to uplevel my data visualization skills for a while, and I finally found time to do it. The process is going very slow, partly because it’s a little unclear what “uplevel” means in this specific case, and when I’m going to be “done”.
+So far I’ve read two classic (or just old, if you like) books - John Tukey’s Exploratory Data Analysis and William Cleveland’s Visualizing Data. I then picked two random datasets on Kaggle and tried to apply what I’ve learned....</p>
+</p>
+<div class=article-list-footer>
+<span class=article-list-date>
+Feb 14, 2022
+</span>
+</div>
+</li>
+<li class=article-list-item>
+<a href=https://blog.dkishylau.com/posts/web3-twitter/ title="Mining data in Web3 Twitter">
+<h5>Mining data in Web3 Twitter</h5>
+</a>
+<p>
+<p>I spent several weeks in November-December building a data pipeline and a website to surface urls that trend on web3/crypto Twitter. This was a collaboration project with Nadia and Jared from South Park Commons. They were interested in making web3 development easier while I was interested in getting some non-trivial dataset to practice my data wrangling skills. In the end I learned a lot more about Google Cloud than about time series analysis or data visualization, but that was fun anyway....</p>
+</p>
+<div class=article-list-footer>
+<span class=article-list-date>
+Jan 11, 2022
+</span>
+</div>
+</li>
+<li class=article-list-item>
+<a href=https://blog.dkishylau.com/posts/tokenomics-of-bliss/ title="Tokenomics of Bliss">
+<h5>Tokenomics of Bliss</h5>
+</a>
+<p>
+<p>I’ve spent a bit of time looking at various projects in crypto space and trying to make sense of them. This post tries to cover a vast part of space that is sometimes referred to as “tokenomics”.
+...</p>
+</p>
+<div class=article-list-footer>
+<span class=article-list-date>
+Jan 3, 2022
+</span>
+</div>
+</li>
+<li class=article-list-item>
+<a href=https://blog.dkishylau.com/posts/choosing-blog-platform/ title="Choosing Blog Platform">
+<h5>Choosing Blog Platform</h5>
+</a>
+<p>
+<p>Ok, I know this blog so far is only about blogging, which is never a good sign, but I spent about a week looking at various platforms and frameworks, so there has to be something useful in all of that.
+...</p>
+</p>
+<div class=article-list-footer>
+<span class=article-list-date>
+Dec 22, 2021
+</span>
+</div>
+</li>
+<li class=article-list-item>
+<a href=https://blog.dkishylau.com/posts/what-is-this-blog/ title="What Is This Blog">
+<h5>What Is This Blog</h5>
+</a>
+<p>
+<p>I plan to use this blog as a random collection of reports about my side projects and things that I learned or looked into along the way.
+...</p>
+</p>
+<div class=article-list-footer>
+<span class=article-list-date>
+Dec 21, 2021
+</span>
+</div>
+</li>
+</ul>
+<footer class=footer>
+<p>
+<span>&copy; 2022 <a href=https://blog.dkishylau.com/>Dzmitry Kishylau</a></span>
+<span>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo</a></span>
+<span>Theme is based on <a href=https://github.com/nielsenramon/chalk rel="noreferrer noopener" target=_blank>Chalk</a></span>
+</p>
+</footer>
+</div>
+</div>
+</main>
+<script src=https://blog.dkishylau.com/javascripts/vendor.min.js></script>
+<script src=https://blog.dkishylau.com/javascripts/application.min.js></script>
+</body>
+</html>
