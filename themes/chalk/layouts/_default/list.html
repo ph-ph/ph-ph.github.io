@@ -2,11 +2,24 @@
 
 <!-- $pages -->
 {{ $pages := union .RegularPages .Sections }}
-<!---->{{ if .IsHome }} {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+<!---->
+{{ if .IsHome }} {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{ end }}
 
 <!-- Articles -->
-{{ $paginator := .Paginate $pages }} {{ range $index, $page := $paginator.Pages }}
+{{ $paginator := .Paginate $pages }}
+<ul class="article-list">
+  {{ range $index, $page := $paginator.Pages }}
+    <li class="article-list-item {{ with site.Params.scrollappear_enabled }}scrollappear{{ end }}">
+      <a href="{{ .Permalink }}" title="{{ .Title }}">
+        <h5>{{ .Title }}</h5>
+      </a>
+      <p>
+        <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+      </p>
+      {{ partial "article/info-footer.html" . }}
+    </li>
+    {{/*
 <article class="post-entry">
   <h2>{{ .Title }}</h2>
   <time>{{ .Date | time.Format ":date_medium" }}</time>
@@ -15,7 +28,9 @@
     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
   </section>
 </article>
-{{ end }}
+*/}}
+  {{ end }}
+</ul>
 
 <!-- Main Nav -->
 {{ if gt $paginator.TotalPages 1 }}
