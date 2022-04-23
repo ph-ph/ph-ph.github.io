@@ -1,0 +1,25 @@
+{{ with site.Params.ga_analytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', '{{ . }}');
+</script>
+{{ end }}}
+
+<script src="{{ (resources.Get `javascripts/vendor.js` | resources.Minify ).Permalink }}" ></script>
+
+{{ if not site.Params.local_fonts }}
+  <script src="{{ (resources.Get `javascripts/webfonts.js` | js.Build | resources.Minify ).Permalink }}"></script>
+{{ end }}
+
+{{ with site.Params.scrollappear_enabled }}
+  <script src="{{ (resources.Get `javascripts/scrollappear.js` | resources.Minify ).Permalink }}"></script>
+{{ end }}
+
+<script src="{{ (resources.Get `javascripts/application.js` | resources.Minify ).Permalink }}"></script>
+
+{{ with site.Params.theme_toggle }}
+  <script src="{{ (resources.Get `javascripts/themetoggle.js` | resources.Minify ).Permalink }}"></script>
+{{ end }}

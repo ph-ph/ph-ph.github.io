@@ -3,6 +3,7 @@ figure {
   margin: 0;
 }
 
-figcaption {
-  font-size: 2rem;
+.article-content figcaption p {
+  font-size: 0.9rem;
+  margin-top: -30px;
 }

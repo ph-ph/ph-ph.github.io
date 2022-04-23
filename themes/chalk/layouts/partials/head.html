@@ -16,13 +16,6 @@
   {{ end }}
 
   <!-- Styles & Scripts -->
-  {{ $app_css := resources.Get "app.css" }}
-  <!---->
-  {{ $custom_css := resources.Get "custom.css" }}
-  <!---->
-  {{ $css := slice $app_css $custom_css | resources.Concat "app.css" | minify }}
-  <link rel="preload stylesheet" as="style" href="{{ $css.Permalink }}" />
-
 
   <!-- Chalk styles -->
   {{ $favicon := 0 }}
@@ -60,6 +53,12 @@
     <link rel="stylesheet" href="{{ $chalk_css.Permalink }}">
   {{ end  }}
 
+  <!--Override with my styles where needed-->
+  {{ $css := resources.Get "custom.css" | minify }}
+  <link rel="preload stylesheet" as="style" href="{{ $css.Permalink }}" />
+
+  <!--Syntax highlighting?-->
+
   {{ if and .IsPage (not site.Params.disableHLJS) }}
   <link rel="preload stylesheet" as="style" href="{{ `an-old-hope.min.css` | absURL }}" />
   <script
@@ -69,16 +68,8 @@
   ></script>
   {{ end }}
 
-  <!-- Preload -->
-  <link rel="preload" as="image" href="{{ `theme.png` | absURL }}" />
-
-  {{ range $.Scratch.Get "social-list" }}
-  <link rel="preload" as="image" href="{{ printf `%s.svg` . | absURL }}" />
-  {{ end }}
-
-  <!-- Favicon -->
-  <link rel="icon" href="{{ `favicon.ico` | absURL }}" />
-  <link rel="apple-touch-icon" href="{{ `apple-touch-icon.png` | absURL }}" />
+  {{/*TODO: Fix jQuery*/}}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <!-- Generator -->
   {{ hugo.Generator }}

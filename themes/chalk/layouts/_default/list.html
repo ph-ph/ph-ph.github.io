@@ -19,16 +19,6 @@
       </p>
       {{ partial "article/info-footer.html" . }}
     </li>
-    {{/*
-<article class="post-entry">
-  <h2>{{ .Title }}</h2>
-  <time>{{ .Date | time.Format ":date_medium" }}</time>
-  <a href="{{ .Permalink }}"></a>
-  <section class="entry-content">
-    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
-  </section>
-</article>
-*/}}
   {{ end }}
 </ul>
 
