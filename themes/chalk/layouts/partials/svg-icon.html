@@ -1,3 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="icon-{{ .icon }}">
-  <use href="/i-{{ .icon }}.svg#icon-{{ .icon }}" xlink:href="/i-{{ .icon }}'.svg#icon-{{ .icon }}"></use>
+  {{ $icon := resources.Get (printf "icons/%s.svg" .icon) }}
+  {{ $iconPath:= printf "%s#icon-%s" $icon.Permalink .icon }}
+  <use href="{{ $iconPath }}" xlink:href="{{ $iconPath }}"></use>
 </svg>
