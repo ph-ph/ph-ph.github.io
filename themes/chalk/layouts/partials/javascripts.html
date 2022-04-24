@@ -8,6 +8,12 @@
 </script>
 {{ end }}
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="{{ (resources.Get `javascripts/zooming.min.js`).Permalink }}"></script>
+<script src="{{ (resources.Get `javascripts/retina.min.js`).Permalink }}"></script>
+<script src="{{ (resources.Get `javascripts/svgxuse.min.js`).Permalink }}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
 <script src="{{ (resources.Get `javascripts/vendor.js` | resources.Minify ).Permalink }}" ></script>
 
 {{ if not site.Params.local_fonts }}

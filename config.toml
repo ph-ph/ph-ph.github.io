@@ -14,7 +14,7 @@ theme = 'chalk'
   twitter = 'dkishylau'
   github = 'ph-ph'
   blog_theme = 'light'
-  local_fonts = true
+  local_fonts = false
 
 [markup.goldmark.renderer]
   unsafe = true
