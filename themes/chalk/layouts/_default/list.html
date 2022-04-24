@@ -12,7 +12,10 @@
   {{ range $index, $page := $paginator.Pages }}
     <li class="article-list-item {{ with site.Params.scrollappear_enabled }}scrollappear{{ end }}">
       <a href="{{ .Permalink }}" title="{{ .Title }}">
-        <h5>{{ .Title }}</h5>
+        <h5>
+          {{ .Title }}
+          {{ partial "svg-icon.html" (dict "context" . "icon" "arrow-right") }}
+        </h5>
       </a>
       <p>
         <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
@@ -20,18 +23,18 @@
       {{ partial "article/info-footer.html" . }}
     </li>
   {{ end }}
-</ul>
 
-<!-- Main Nav -->
-{{ if gt $paginator.TotalPages 1 }}
-<nav class="main-nav">
-  {{ if $paginator.HasPrev }}
-  <a class="prev" href="{{ $paginator.Prev.URL }}">← {{ i18n "prev_page" }}</a>
-  {{ end }}<!---->
-  {{ if $paginator.HasNext }}
-  <a class="next" href="{{ $paginator.Next.URL }}">{{ i18n "next_page" }} →</a>
+  <!-- Main Nav -->
+  {{ if gt $paginator.TotalPages 1 }}
+    <li class="article-pagination {{ with site.Params.scrollappear_enabled }}scrollappear{{ end }}">
+      {{ if $paginator.HasPrev }}
+        <a href="{{ $paginator.Prev.URL }}" class="article-pagination-left">{{ partial "svg-icon.html" (dict "context" . "icon" "arrow-left") }} Newer posts</a>
+      {{ end }}
+      {{ if $paginator.HasNext }}
+        <a href="{{ $paginator.Next.URL }}" class="article-pagination-right">Older posts {{ partial "svg-icon.html" (dict "context" . "icon" "arrow-right") }}</a>
+      {{ end }}
+    </li>
   {{ end }}
-</nav>
-{{ end }}<!---->
+</ul>
 
 {{ end }}
