@@ -27,7 +27,7 @@ EDA is not quite data analytics or data science - people working in these discip
 EDA involves building a lot of plots, but that's simply because humans are fairly good at detecting structure with their eyes. Not super good, though, and there's a lot of tricks and techniques to help the eyes see better - non-linear scales, fitting curves, smoothing out data, adding various annotations, strategically placing two plots next to each other.
 
 The plots don't have to be pretty, though. This one is ok for EDA, but quite terrible from the point of view of classic data visualization:
-![Ugly EDA scatter plot](/img/EDA_plot.png)
+{{< image path="images/EDA_plot.png" alt="Ugly EDA scatter plot" >}}
 
 # Data visualization (DataVis)
 Data visualization, on the other hand, is mostly about presenting some important thing(s) about your data to other people in the most clear and direct way possible. It usually starts when you already have an important insight or an obviously significant dataset, like COVID cases data, and you want to present it in a most efficient and usable way.
