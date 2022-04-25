@@ -36,13 +36,9 @@
   {{ $dark_css := resources.Get "stylesheets/dark.scss" | resources.ToCSS }}
 
   {{ if site.Params.theme_toggle }}
-    {{ if eq site.Params.blog_theme "light" }}
-      <link rel="stylesheet" type="text/css" title="light" id="light" href="{{ $light_css.Permalink }}">
-      <link rel="stylesheet" type="text/css" title="dark" id="dark" href="{{ $dark_css.Permalink }}" disabled="true">
-    {{ else  }}
-      <link rel="stylesheet" type="text/css" title="light" id="light" href="{{ $light_css.Permalink }}">
-      <link rel="stylesheet" type="text/css" title="dark" id="dark" href="{{ $dark_css.Permalink }}" disabled="false">
-    {{ end  }}
+    <!-- If theme toggle is enabled, default scheme is always light -->
+    <link rel="stylesheet" type="text/css" title="light" id="light" href="{{ $light_css.Permalink }}" />
+    <link rel="stylesheet" type="text/css" title="dark" id="dark" href="{{ $dark_css.Permalink }}" disabled="true" />
   {{ else }}
     {{ $chalk_css := 0 }}
     {{ if eq site.Params.blog_theme "light" }}

@@ -7,13 +7,13 @@ theme = 'chalk'
   # chalk theme parameters
   about_enabled = true # Change to true if you wish to show an icon in the navigation that redirects to the about page
   scrollappear_enabled = true
-  theme_toggle = false
+  theme_toggle = true
   rss_enabled = true
+  blog_theme = 'light' # Doesn't matter if theme_toggle = true
 
   # social network accounts
   twitter = 'dkishylau'
   github = 'ph-ph'
-  blog_theme = 'light'
   local_fonts = false
 
 [markup.goldmark.renderer]
