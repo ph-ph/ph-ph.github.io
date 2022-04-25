@@ -10,7 +10,7 @@
 {{ $paginator := .Paginate $pages }}
 <ul class="article-list">
   {{ range $index, $page := $paginator.Pages }}
-    <li class="article-list-item {{ with site.Params.scrollappear_enabled }}scrollappear{{ end }}">
+    <li class="article-list-item {{ with site.Params.chalk.scrollappear_enabled }}scrollappear{{ end }}">
       <a href="{{ .Permalink }}" title="{{ .Title }}">
         <h5>
           {{ .Title }}
@@ -26,7 +26,7 @@
 
   <!-- Main Nav -->
   {{ if gt $paginator.TotalPages 1 }}
-    <li class="article-pagination {{ with site.Params.scrollappear_enabled }}scrollappear{{ end }}">
+    <li class="article-pagination {{ with site.Params.chalk.scrollappear_enabled }}scrollappear{{ end }}">
       {{ if $paginator.HasPrev }}
         <a href="{{ $paginator.Prev.URL }}" class="article-pagination-left">{{ partial "svg-icon.html" (dict "context" . "icon" "arrow-left") }} Newer posts</a>
       {{ end }}

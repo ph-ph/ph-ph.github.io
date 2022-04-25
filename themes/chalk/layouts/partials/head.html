@@ -21,7 +21,7 @@
   {{ $favicon := 0 }}
   {{ $appleicon := 0 }}
 
-  {{ if eq site.Params.blog_theme "light" }}
+  {{ if eq site.Params.chalk.blog_theme "light" }}
     {{ $favicon = resources.Get "images/favicon-light.ico" }}
     {{ $appleicon = resources.Get "images/apple-touch-icon-light.png" }}
   {{ else }}
@@ -35,13 +35,13 @@
   {{ $light_css := resources.Get "stylesheets/light.scss" | resources.ToCSS }}
   {{ $dark_css := resources.Get "stylesheets/dark.scss" | resources.ToCSS }}
 
-  {{ if site.Params.theme_toggle }}
+  {{ if site.Params.chalk.theme_toggle }}
     <!-- If theme toggle is enabled, default scheme is always light -->
     <link rel="stylesheet" type="text/css" title="light" id="light" href="{{ $light_css.Permalink }}" />
     <link rel="stylesheet" type="text/css" title="dark" id="dark" href="{{ $dark_css.Permalink }}" disabled="true" />
   {{ else }}
     {{ $chalk_css := 0 }}
-    {{ if eq site.Params.blog_theme "light" }}
+    {{ if eq site.Params.chalk.blog_theme "light" }}
       {{ $chalk_css = $light_css }}
     {{ else }}
       {{ $chalk_css = $dark_css }}

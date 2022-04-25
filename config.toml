@@ -4,17 +4,19 @@ title = 'Dzmitry Kishylau'
 theme = 'chalk'
 
 [params]
+[params.chalk]
   # chalk theme parameters
   about_enabled = true # Change to true if you wish to show an icon in the navigation that redirects to the about page
   scrollappear_enabled = true
   theme_toggle = true
   rss_enabled = true
   blog_theme = 'light' # Doesn't matter if theme_toggle = true
+  local_fonts = false
 
+[params.social]
   # social network accounts
   twitter = 'dkishylau'
   github = 'ph-ph'
-  local_fonts = false
 
 [markup.goldmark.renderer]
   unsafe = true

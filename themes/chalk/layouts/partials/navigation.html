@@ -1,7 +1,8 @@
-<nav class="header-nav {{ with $.Site.Params.scrollappear_enabled }}scrollappear{{ end }}">
+{{ $.Site.Params }}
+<nav class="header-nav {{ with $.Site.Params.chalk.scrollappear_enabled }}scrollappear{{ end }}">
   <a href="{{ `/` | relURL }}" class="header-logo" title="{{ $.Site.Title }}">{{ $.Site.Title }}</a>
   <ul class="header-links">
-    {{ with $.Site.Params.about_enabled }}
+    {{ with $.Site.Params.chalk.about_enabled }}
     <li>
       <a href="{{ `about` | relURL }}" title="About">
         {{ partial "svg-icon.html" (dict "context" . "icon" "about") }}
@@ -9,7 +10,7 @@
     </li>
     {{ end  }}
     {{ range $key, $value := $.Site.Data.social.sites }}
-      {{ with index $.Site.Params $key }}
+      {{ with index $.Site.Params.social $key }}
         <li>
           <a
             href="{{ $value.url }}{{ . }}"
@@ -21,14 +22,14 @@
         </li>
       {{ end }}
     {{ end }}
-    {{ with $.Site.Params.rss_enabled }}
+    {{ with $.Site.Params.chalk.rss_enabled }}
       <li>
         <a href="{{ `index.xml` | relURL }}" rel="noreferrer noopener" target="_blank" title="RSS">
           {{ partial "svg-icon.html" (dict "context" . "icon" "rss" ) }}
         </a>
       </li>
     {{ end }}
-    {{ with $.Site.Params.theme_toggle }}
+    {{ with $.Site.Params.chalk.theme_toggle }}
       <li>
         <a onclick="toggle()" title="Toggle Theme">
           {{ partial "svg-icon.html" (dict "context" . "icon" "theme") }}
@@ -40,7 +41,7 @@
 
 {{/* TODO: enable tag navigation
 {% if site.tag_nav_enabled %}
-<ul class="header-tags {% if site.scrollappear_enabled %}scrollappear{% endif %}">
+<ul class="header-tags {% if site.chalk.scrollappear_enabled %}scrollappear{% endif %}">
   {% assign tags = site.tags | sort %}
   {% for tag in tags %}
   {% if forloop.index > 10 %}
