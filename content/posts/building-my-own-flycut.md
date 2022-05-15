@@ -1,7 +1,9 @@
 ---
-title: "Building my own Flycut"
+title: "Building my own Flycut app"
 date: 2022-05-15T13:19:37-07:00
 draft: true
+images:
+    - "img/flycut.png"
 summary: |
     I recently went down a little rabbit hole with clipboard managers on MacOS. I can't get the hours spent back,
     but here's a little summary in case it helps other people.
@@ -68,4 +70,4 @@ The things were straightforward after that:
 I [forked](https://github.com/ph-ph/Flycut) the repo to persist my changes in the settings, in case anyone else wants to try that route.
 
 # The end
-Do you have your own favorite clipboard manager, or can explain why it's a bad idea to use them at all? Let me know on [Twitter]()
+Do you have your own favorite clipboard manager, or can explain why it's a bad idea to use them at all? Let me know on [Twitter](https://twitter.com/dkishylau)
