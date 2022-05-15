@@ -1,7 +1,7 @@
 ---
 title: "Building my own Flycut app"
 date: 2022-05-15T13:19:37-07:00
-draft: true
+draft: false
 images:
     - "img/flycut.png"
 summary: |
