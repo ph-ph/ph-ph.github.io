@@ -1,0 +1,160 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<title>Building my own Flycut app - Dzmitry Kishylau</title>
+<meta name=description content="I recently went down a little rabbit hole with clipboard managers on MacOS. I can&rsquo;t get the hours spent back,
+but here&rsquo;s a little summary in case it helps other people.">
+<meta name=author content>
+<link rel=icon type=image/x-icon href=https://blog.dkishylau.com/images/favicon-light.ico>
+<link rel=apple-touch-icon href=https://blog.dkishylau.com/images/apple-touch-icon-light.png>
+<link rel=stylesheet type=text/css title=light id=light href=https://blog.dkishylau.com/stylesheets/light.css>
+<link rel=stylesheet type=text/css title=dark id=dark href=https://blog.dkishylau.com/stylesheets/dark.css disabled>
+<link rel="preload stylesheet" as=style href=https://blog.dkishylau.com/custom.min.css>
+<link rel="preload stylesheet" as=style href=https://blog.dkishylau.com/an-old-hope.min.css>
+<script defer src=https://blog.dkishylau.com/highlight.min.js onload=hljs.initHighlightingOnLoad()></script>
+<meta name=generator content="Hugo 0.92.2">
+<meta property="og:title" content="Building my own Flycut app">
+<meta property="og:description" content="I recently went down a little rabbit hole with clipboard managers on MacOS. I can&rsquo;t get the hours spent back,
+but here&rsquo;s a little summary in case it helps other people.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.dkishylau.com/posts/building-my-own-flycut/"><meta property="og:image" content="https://blog.dkishylau.com/img/flycut.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-05-15T13:19:37-07:00">
+<meta property="article:modified_time" content="2022-05-15T13:19:37-07:00">
+<meta itemprop=name content="Building my own Flycut app">
+<meta itemprop=description content="I recently went down a little rabbit hole with clipboard managers on MacOS. I can&rsquo;t get the hours spent back,
+but here&rsquo;s a little summary in case it helps other people."><meta itemprop=datePublished content="2022-05-15T13:19:37-07:00">
+<meta itemprop=dateModified content="2022-05-15T13:19:37-07:00">
+<meta itemprop=wordCount content="718"><meta itemprop=image content="https://blog.dkishylau.com/img/flycut.png">
+<meta itemprop=keywords content>
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://blog.dkishylau.com/img/flycut.png">
+<meta name=twitter:title content="Building my own Flycut app">
+<meta name=twitter:description content="I recently went down a little rabbit hole with clipboard managers on MacOS. I can&rsquo;t get the hours spent back,
+but here&rsquo;s a little summary in case it helps other people.">
+</head>
+<body>
+<main class=main>
+<div class="grid grid-centered">
+<div class=grid-cell>
+<nav class="header-nav scrollappear">
+<a href=/ class=header-logo title="Dzmitry Kishylau">Dzmitry Kishylau</a>
+<ul class=header-links>
+<li>
+<a href=/about title=About><svg xmlns="http://www.w3.org/2000/svg" class="icon-about"><use href="https://blog.dkishylau.com/icons/about.svg#icon-about" xlink:href="https://blog.dkishylau.com/icons/about.svg#icon-about"/></svg>
+</a>
+</li>
+<li>
+<a href=https://github.com/ph-ph rel="noreferrer noopener" target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon-github"><use href="https://blog.dkishylau.com/icons/github.svg#icon-github" xlink:href="https://blog.dkishylau.com/icons/github.svg#icon-github"/></svg>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/dkishylau rel="noreferrer noopener" target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon-twitter"><use href="https://blog.dkishylau.com/icons/twitter.svg#icon-twitter" xlink:href="https://blog.dkishylau.com/icons/twitter.svg#icon-twitter"/></svg>
+</a>
+</li>
+<li>
+<a href=/index.xml rel="noreferrer noopener" target=_blank title=RSS><svg xmlns="http://www.w3.org/2000/svg" class="icon-rss"><use href="https://blog.dkishylau.com/icons/rss.svg#icon-rss" xlink:href="https://blog.dkishylau.com/icons/rss.svg#icon-rss"/></svg>
+</a>
+</li>
+<li>
+<a onclick=toggle() title="Toggle Theme"><svg xmlns="http://www.w3.org/2000/svg" class="icon-theme"><use href="https://blog.dkishylau.com/icons/theme.svg#icon-theme" xlink:href="https://blog.dkishylau.com/icons/theme.svg#icon-theme"/></svg>
+</a>
+</li>
+</ul>
+</nav>
+<article class="article scrollappear">
+<header class=article-header>
+<h1>Building my own Flycut app</h1>
+<div class=article-list-footer>
+<span class=article-list-date>
+May 15, 2022
+</span>
+<span class=article-list-divider>-</span>
+<span class=article-list-minutes>
+4 minute read
+</span>
+</div>
+</header>
+<div class=article-content>
+<p>I recently went down a little rabbit hole with clipboard managers on MacOS. I can&rsquo;t get the hours spent back,
+but here&rsquo;s a little summary in case it helps other people.</p>
+<h1 id=clipboard-managers-on-macos>Clipboard managers on MacOS</h1>
+<p>We engineers do a lot of copypaste. To be more efficient at that, it&rsquo;s very useful to have two things:</p>
+<ul>
+<li>a history of stuff you copied;</li>
+<li>an ability to choose and paste something from that history.</li>
+</ul>
+<p>Since MacOS doesn&rsquo;t provide either of these, there&rsquo;s a small niche for &ldquo;clipboard managers&rdquo; - apps that keep track of clipboard history for you.</p>
+<p>I haven&rsquo;t done a comprehensive analysis of the whole field, but in the past I&rsquo;ve seen two apps recommended:</p>
+<ul>
+<li><a href="https://apps.apple.com/us/app/copyclip-clipboard-history/id595191960?mt=12">CopyClip</a></li>
+<li><a href="https://apps.apple.com/us/app/flycut-clipboard-manager/id442160987?mt=12">Flycut</a></li>
+</ul>
+<p>You can also find similar functionality in some IDEs and in powerhouse apps like <a href=https://www.alfredapp.com/>Alfred</a>, but it&rsquo;s either limited or costs $$$.</p>
+<p>I&rsquo;ve used CopyClip in the past, and it didn&rsquo;t feel convenient enough - you have to click on the icon in the menu bar and select what you want to paste.
+Flycut, on the other hand, does exactly what I&rsquo;d expect it to - there&rsquo;s a <code>Ctrl-Shift-V</code> shortcut that lets you cycle through the clipboard and choose what needs to be pasted.
+So, I really wanted to use it. But&mldr;</p>
+<h1 id=the-problem-with-password-managers>The problem with password managers</h1>
+<p>Copying passwords into clipboard feels relatively secure. Some password managers go a bit further and clear the clipboard shortly after you copied a password.</p>
+<p>However, it feels less secure with clipboard managers. A password can live in clipboard history for a very long time, its visible in plain text in history UI,
+and the clipboard manager app may even store it on disk, just in case. Both CopyClip and Flycut acknowledge this problem.</p>
+<p>CopyClip has a &ldquo;skip list&rdquo; of apps where copied content is not stored in clipboard history.</p>
+<p>Flycut, on the other hand, has a rather low-level way of solving this problem - it allows to exclude certain &ldquo;pasteboard types&rdquo;, which in theory should identify the fields with sensitive information.
+As of the latest official release, 1.9.6, this doesn&rsquo;t really help with excluding 1Password, for example. There&rsquo;s also a heuristic based on the length and contents of copied content, but it only helps
+if all your passwords are of the same length and follow the same rules of upper/lowercase letter, symbol and number in them. In short, not great.</p>
+<h1 id=open-source-to-the-rescue>Open source to the rescue</h1>
+<p>Flycat is open-source, so you can follow the history of the problem over the years: <a href=https://github.com/TermiT/Flycut/pull/117>#117</a>, <a href=https://github.com/TermiT/Flycut/issues/127>#127</a>, <a href=https://github.com/TermiT/Flycut/issues/225>#225</a>, <a href=https://github.com/TermiT/Flycut/issues/252>#252</a>.</p>
+<p>However, proposed fixes have never made it into the official release, and the last release was 2 years ago, so who knows when the next one is going to be.</p>
+<p>One of the fixes, though, has been merged into the main branch, and there&rsquo;s a <a href=https://github.com/TermiT/Flycut/issues/252#issuecomment-1012974848>recent comment</a> claiming that it does solve the problem, at least for 1Password, which is what I use.</p>
+<p>All I had to do was download the source code and build the app. I&rsquo;ve never developed MacOS apps, and have tried to stay as far as possible from Xcode, but how hard can it be?</p>
+<p>Turns out, moderately hard.</p>
+<h1 id=building-flycut-locally>Building Flycut locally</h1>
+<p>When I tried building the app, it failed. The problem, I think, boils down to the following:</p>
+<ul>
+<li>the app needs to be signed;</li>
+<li>to sign an app, you need an Apple ID and a certificate;</li>
+<li>you can create <em>development</em> certificate in XCode;</li>
+<li>however, because Flycut uses iCloud and push notifications, you have to use, like, a real certificate that you create through Apple Developer program;</li>
+<li>it costs $99 to enroll into Apple Developer program, which is a bit too much for an ability to copypaste more efficiently.</li>
+</ul>
+<p>But! I personally need neither iCloud, nor push notifications, and after some struggle with XCode UI I managed to remove both from the app config.</p>
+<p>The things were straightforward after that:</p>
+<ul>
+<li>Run &ldquo;Archive&rdquo; command to build a release version of the app.</li>
+<li>&ldquo;Distribute&rdquo; the resulting archive by copying it to some folder.</li>
+<li>Copy the app from that folder to Applications.</li>
+</ul>
+<p>I <a href=https://github.com/ph-ph/Flycut>forked</a> the repo to persist my changes in the settings, in case anyone else wants to try that route.</p>
+<h1 id=the-end>The end</h1>
+<p>Do you have your own favorite clipboard manager, or can explain why it&rsquo;s a bad idea to use them at all? Let me know on <a href=https://twitter.com/dkishylau>Twitter</a></p>
+</div>
+<div class=article-share>
+<a href="https://twitter.com/intent/tweet?text=Building%20my%20own%20Flycut%20app&url=https%3a%2f%2fblog.dkishylau.com%2fposts%2fbuilding-my-own-flycut%2f" title="Share on Twitter" rel="noreferrer noopener" target=_blank><svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5.0-96.8 43.4-96.8 96.9.0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7.0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 .4.0.8.0 1.2.0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2.0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8.0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+</a>
+<a href="https://www.facebook.com/sharer/sharer.php?href=https%3a%2f%2fblog.dkishylau.com%2fposts%2fbuilding-my-own-flycut%2f" title="Share on Facebook" rel="noreferrer noopener" target=_blank><svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5.0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+</a>
+</div>
+</article>
+<footer class="footer scrollappear">
+<p>
+<span>&copy; 2022 <a href=https://blog.dkishylau.com/>Dzmitry Kishylau</a></span>
+<span>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo</a></span>
+<span>Theme is based on <a href=https://github.com/nielsenramon/chalk rel="noreferrer noopener" target=_blank>Chalk</a></span>
+</p>
+</footer>
+</div>
+</div>
+</main>
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js></script>
+<script src=https://blog.dkishylau.com/javascripts/zooming.min.js></script>
+<script src=https://blog.dkishylau.com/javascripts/retina.min.js></script>
+<script src=https://blog.dkishylau.com/javascripts/svgxuse.min.js></script>
+<script src=https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js></script>
+<script src=https://blog.dkishylau.com/javascripts/vendor.min.js></script>
+<script src=https://blog.dkishylau.com/javascripts/webfonts.min.js></script>
+<script src=https://blog.dkishylau.com/javascripts/scrollappear.min.js></script>
+<script src=https://blog.dkishylau.com/javascripts/application.min.js></script>
+<script src=https://blog.dkishylau.com/javascripts/themetoggle.min.js></script>
+</body>
+</html>
