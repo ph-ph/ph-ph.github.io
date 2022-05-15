@@ -408,7 +408,7 @@ template {
   box-sizing: border-box; }
 
 html {
-  font-size: 18px; }
+  font-size: 16px; }
 
 body {
   margin: 0 auto;
@@ -438,37 +438,37 @@ h6 {
   text-rendering: optimizeLegibility; }
 
 h1 {
-  font-size: 28.8px;
+  font-size: 25.6px;
   font-weight: 400;
   letter-spacing: -.03em;
   color: #ebeaea; }
 
 h2 {
-  font-size: 27px;
+  font-size: 24px;
   font-weight: 400; }
 
 h3 {
-  font-size: 23.4px;
+  font-size: 20.8px;
   font-weight: 500; }
 
 h4 {
-  font-size: 19.8px;
+  font-size: 17.6px;
   font-weight: 500; }
 
 h5 {
-  font-size: 21.06px;
+  font-size: 18.72px;
   font-weight: 500; }
 
 h6 {
-  font-size: 18px; }
+  font-size: 16px; }
 
 @media all and (max-width: 767px) {
   h1 {
-    font-size: 27px; }
+    font-size: 24px; }
   h2 {
-    font-size: 24.3px; }
+    font-size: 21.6px; }
   h3 {
-    font-size: 22.5px; } }
+    font-size: 20px; } }
 
 a {
   color: #d2cfcf;
@@ -546,7 +546,7 @@ img {
   width: 100%;
   padding: 0 20px;
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   text-align: left;
   vertical-align: top; }
   .grid-cell.with-1col {
@@ -723,7 +723,7 @@ img {
 .article-list-item p {
   display: block;
   margin: 12px 0 10px;
-  font-size: 16px;
+  font-size: 15px;
   color: #888181; }
 
 .article-list-footer {
@@ -768,7 +768,7 @@ img {
   .article-header p {
     display: block;
     margin: 12px 0 10px;
-    font-size: 18px;
+    font-size: 16px;
     color: #888181; }
   .article-header a {
     text-decoration: none; }
