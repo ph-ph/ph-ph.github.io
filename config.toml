@@ -2,6 +2,7 @@ baseURL = 'https://blog.dkishylau.com/'
 languageCode = 'en-us'
 title = 'Dzmitry Kishylau'
 theme = 'chalk'
+googleAnalytics = 'G-4TECK8WVZ2'
 
 [params]
 [params.chalk]
